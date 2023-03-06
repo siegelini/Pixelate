@@ -16,12 +16,17 @@ makeRow();
 const button = document.getElementById("add-row");
 button.addEventListener("click", makeRow);
 
-table.addEventListener('click', colorize)
-function colorize (event) {
- const target = event.target
- if (target.className.length) {
-  target.className = ''
- } else {
-  target.className = 'red'
- }
+table.addEventListener("click", colorize);
+function colorize(event) {
+  const target = event.target;
+  if (target.className.length) {
+    target.className = "";
+  } else {
+    target.className = "red";
+  }
 }
+
+const select = document.getElementById("select");
+select.addEventListener("change", (event) => {
+  console.log(event.target.value);
+});
